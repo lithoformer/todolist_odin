@@ -30,24 +30,24 @@
                     class="projectName">Default</span><img class="icon newToDo" src="378dacad5886df7eb57d.svg" /></div>
         </div>
     </div>
-    <dialog class="editDialog">
+    <dialog class="addDialog">
         <span class="toDoTitle">Add To Do</span>
-        <form class="editForm">
+        <form class="addForm">
             <div class="formElement"><label>
                     Title:&nbsp
-                    <input type="text" class="title" name="title" id="title" required autofocus>
+                    <input type="text" class="title field" name="title" id="titleAdd" required autofocus>
                 </label></div>
             <div class="formElement"><label>
                     Description:&nbsp
-                    <textarea class="desc" name="desc" id="desc" value=""></textarea>
+                    <textarea class="desc field" name="desc" id="descAdd" value=""></textarea>
                 </label></div>
             <div class="formElement"><label>
                     Due date:&nbsp
-                    <input type="date" class="date" name="date" id="date" required>
+                    <input type="date" class="date field" name="date" id="dateAdd" required>
                 </label></div>
             <div class="formElement"><label>
                     Priority:&nbsp
-                    <select class="priority">
+                    <select class="priority field">
                         <option value="default">Choose…</option>
                         <option>Urgent!</option>
                         <option>High</option>
@@ -58,11 +58,11 @@
                 </label></div>
             <div class="formElement"><label>
                     Notes:&nbsp
-                    <textarea class="notes" name="notes" id="notes"></textarea>
+                    <textarea class="notes field" name="notes" id="notesAdd"></textarea>
                 </label></div>
             <div class="formElement"><label>
                     Completed:&nbsp
-                    <select class="completed" required>
+                    <select class="completed field" required>
                         <option value="default">Choose…</option>
                         <option>Yes</option>
                         <option>No</option>
@@ -70,11 +70,11 @@
                 </label></div>
             <div class="formElement"><label>
                     Project:&nbsp
-                    <input type="text" class="project" name="project" id="project">
+                    <input type="text" class="project field" name="project" id="projectAdd">
                 </label></div>
             <div class="dialogButtonDiv">
-                <button class="dialogButton" id="confirmBtn" value="default" type="submit">Confirm</button>
-                <button class="dialogButton" id="cancelBtn" value="cancel" formmethod="dialog"
+                <button class="dialogButton" id="confirmBtnAdd" value="default" type="submit">Confirm</button>
+                <button class="dialogButton" id="cancelBtnAdd" value="cancel" formmethod="dialog"
                     type="button">Cancel</button>
             </div>
         </form>
