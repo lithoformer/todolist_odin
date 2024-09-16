@@ -43,11 +43,11 @@
                 </label></div>
             <div class="formElement"><label>
                     Due date:&nbsp
-                    <input type="date" class="date" name="date" id="dateAdd" required>
+                    <input type="date" class="date" name="date" id="dateAdd">
                 </label></div>
             <div class="formElement"><label>
                     Priority:&nbsp
-                    <select class="priority">
+                    <select class="priority" name="priorityEdit">
                         <option value="default">Choose…</option>
                         <option>Urgent!</option>
                         <option>High</option>
@@ -62,7 +62,7 @@
                 </label></div>
             <div class="formElement"><label>
                     Completed:&nbsp
-                    <select class="completed" required>
+                    <select class="completed" name="completedEdit">
                         <option value="default">Choose…</option>
                         <option>Yes</option>
                         <option>No</option>
@@ -72,12 +72,12 @@
                     Project:&nbsp
                     <input type="text" class="project" name="project" id="projectAdd">
                 </label></div>
-            <div class="dialogButtonDiv">
-                <button class="dialogButton" id="confirmBtnAdd" value="default" type="submit">Confirm</button>
-                <button class="dialogButton" id="cancelBtnAdd" value="cancel" formmethod="dialog"
-                    type="button">Cancel</button>
-            </div>
         </form>
+        <div class="dialogButtonDiv">
+            <button class="dialogButton" id="confirmBtnAdd" value="default" type="submit">Confirm</button>
+            <button class="dialogButton" id="cancelBtnAdd" value="cancel" formmethod="dialog"
+                type="button">Cancel</button>
+        </div>
     </dialog>
 </body>
 
