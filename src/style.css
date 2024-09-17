@@ -1,0 +1,406 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Libre Franklin', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+:root {
+    --projects-width: 30vw;
+    --workspace-width: 70vw;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    max-height: 95vh;
+    max-width: 100vw;
+    background-color: aliceblue;
+}
+
+.header1 {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 1fr 2fr repeat(23, 1fr);
+    margin: 1rem;
+    padding: 1rem 0;
+    background-color: azure;
+    border-radius: 2rem;
+    box-shadow: 5px 5px 5px 5px rgba(100, 100, 100, .25);
+    max-height: 6rem;
+    height: 3vh;
+    max-width: 100%;
+    width: 95vw;
+    font-size: 1.5rem;
+}
+
+.header2 {
+    display: flex;
+    align-items: center;
+    margin: 1rem;
+    padding: 1rem 0;
+    border-radius: 2rem;
+    justify-content: space-between;
+    max-height: 6rem;
+    font-size: 1.5rem;
+}
+
+.workspaceHeader {
+    max-width: 95%;
+    width: 95%;
+}
+
+.projectsHeader {
+    max-width: 90%;
+    width: 90%;
+}
+
+.toDoTitle,
+.editProjectTitleText {
+    font-size: 1em;
+}
+
+.icon {
+    max-width: 5rem;
+    max-height: 5rem;
+    width: 3rem;
+    height: 3rem;
+}
+
+.list {
+    display: grid;
+    grid-column: 2 / 3;
+}
+
+.headerSpan {
+    display: grid;
+    grid-column: 3 / span 15;
+}
+
+.notify {
+    display: grid;
+    grid-column: 24 / 25;
+}
+
+.avatar {
+    display: grid;
+    grid-column: 25 / 26;
+}
+
+.outer {
+    display: flex;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.projects {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    height: 100%;
+    width: var(--projects-width);
+    box-shadow: 5px 5px 5px 5px rgba(100, 100, 100, .25);
+    margin: 1rem;
+    background-color: azure;
+    border-radius: 2rem;
+}
+
+.workspace {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    height: 100%;
+    width: var(--workspace-width);
+    box-shadow: 5px 5px 5px 5px rgba(100, 100, 100, .25);
+    margin: 1rem;
+    background-color: azure;
+    border-radius: 2rem;
+}
+
+.card {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-direction: column;
+    background-color: lightskyblue;
+    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, .25);
+    max-width: 15rem;
+    max-height: 15rem;
+    min-width: 10vw;
+    min-height: 20vh;
+    margin: 1rem;
+    padding: 1rem;
+    border-radius: 1rem;
+    overflow: auto;
+}
+
+.cardIcon,
+.icon {
+    max-width: 4vh;
+    max-height: 4vh;
+    width: 2rem;
+    height: 2rem;
+}
+
+.iconContainer {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(8, 1fr);
+}
+
+.newToDo:hover,
+.newProject:hover,
+.cardIcon:hover,
+.dialogButton:hover,
+.projectText:hover {
+    cursor: pointer;
+}
+
+.projectName {
+    background-color: lightcyan;
+    width: 65%;
+    border-radius: 2rem;
+}
+
+.deleteToDo,
+.addEditProject,
+.editProjectDialog {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: lightskyblue;
+    margin: auto;
+    width: 25vw;
+    height: 20vh;
+    padding: 1rem;
+    border-radius: 2rem;
+    font-size: 1em;
+    border: none;
+    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, .25);
+}
+
+.deleteProject {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: lightskyblue;
+    margin: auto;
+    position: static;
+    width: 30vw;
+    height: 15vh;
+    padding: 1rem;
+    border-radius: 2rem;
+    font-size: 1em;
+    border: none;
+    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, .25);
+}
+
+.addDialog,
+.editDialog,
+.viewDialog {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: lightskyblue;
+    margin: auto;
+    position: static;
+    max-width: 500px;
+    width: 35vw;
+    height: 40vh;
+    padding: 1rem;
+    border-radius: 2rem;
+    font-size: 1em;
+    border: none;
+    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, .25);
+}
+
+.dialogButtonDiv,
+.editProjectButtonsDiv,
+.viewButtonsDiv {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 90%;
+}
+
+.dialogButton {
+    background-color: azure;
+    width: 6rem;
+    height: 2rem;
+    border-radius: 1rem;
+    border: none;
+}
+
+.cardContainer {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.cardElement {
+    font-size: 1rem;
+}
+
+.formElement {
+    margin: 1rem;
+}
+
+.completedCard {
+    text-decoration: line-through;
+    box-shadow: none;
+}
+
+.projectDiv {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 1rem;
+    max-width: 90%;
+    width: calc(100% - 4rem);
+    font-size: 1rem;
+    padding: 1rem;
+    align-items: center;
+    justify-content: space-between;
+    background-color: lightskyblue;
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+.viewOuter {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+
+.viewOuter div:nth-child(odd):not(:nth-child(1)) {
+    background-color: aliceblue;
+}
+
+.viewOuter div:nth-child(even) {
+    background-color: lightblue;
+}
+
+.viewOuter div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    padding: .5rem;
+    height: 2rem;
+    border-radius: 1rem;
+}
+
+.check,
+.uncheck {
+    display: grid;
+    grid-column: 1/2;
+}
+
+.viewIcon {
+    display: grid;
+    grid-column: 8/9;
+}
+
+.editIcon {
+    display: grid;
+    grid-column: 9/10;
+}
+
+.delIcon {
+    display: grid;
+    grid-column: 10/11;
+}
+
+.cardText {
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+@media (width < 900px) {
+    .projects {
+        max-width: 50%;
+        width: 40%;
+    }
+
+    .workspace {
+        max-width: 50%;
+        width: 60%;
+    }
+
+    .card {
+        height: 35vh;
+        width: 30vw;
+    }
+
+    .addDialog,
+    .editDialog,
+    .viewDialog {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        background-color: lightskyblue;
+        margin: auto;
+        position: static;
+        max-width: 500px;
+        width: 70vw;
+        height: 40vh;
+        border-radius: 2rem;
+        font-size: 1em;
+        border: none;
+        box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, .25);
+    }
+
+
+    .addEditProject,
+    .editProjectDialog {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        background-color: lightskyblue;
+        margin: auto;
+        width: 55vw;
+        height: 20vh;
+        padding: 1rem;
+        border-radius: 2rem;
+        font-size: 1em;
+        border: none;
+        box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, .25);
+    }
+
+    .deleteProject,
+    .deleteToDo {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        background-color: lightskyblue;
+        margin: auto;
+        width: 85vw;
+        height: 15vh;
+        padding: 1rem;
+        border-radius: 2rem;
+        font-size: 1em;
+        border: none;
+        box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, .25);
+    }
+
+    .header1,
+    .header2 {
+        font-size: 1rem;
+        width: 85%;
+    }
+}

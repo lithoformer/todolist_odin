@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="609a232ab53e413e38d2.css" class="style">
+    <title>To Do List</title>
+<script defer src="main.js"></script></head>
+
+<body>
+    <header class="header1"><a class="link list" href="#"><img class="icon list"
+                src="aa361b13cab36ffadecb.svg" /></a><span class="headerSpan">Zhiguang's To Do List</span><a
+            class="link notify" href="#"><img class="icon notify" src="89afb7ebc9d5381e2fe7.svg" /></a>
+        <a class="link avatar" href="#">
+            <img class="icon avatar" src="c7c1d8791aaa6110a187.png" />
+        </a>
+    </header>
+    <div class="outer">
+        <div class="projects">
+            <div class="projectsHeader header2"><span class="projectsTitle">Projects</span><img class="icon newProject"
+                    src="378dacad5886df7eb57d.svg" /></div>
+        </div>
+        <div class="workspace">
+            <div class="workspaceHeader header2"><span class="workspaceTitle">Workspace</span><img class="icon newToDo"
+                    src="378dacad5886df7eb57d.svg" /></div>
+        </div>
+    </div>
+    <dialog class="addDialog">
+        <span class="toDoTitle">Add To Do</span>
+        <form class="addForm">
+            <div class="formElement"><label>
+                    Title:&nbsp
+                    <input type="text" class="title" name="title" id="titleAdd" autofocus>
+                </label></div>
+            <div class="formElement"><label>
+                    Description:&nbsp
+                    <textarea class="desc" name="desc" id="descAdd" value=""></textarea>
+                </label></div>
+            <div class="formElement"><label>
+                    Due date:&nbsp
+                    <input type="date" class="date" name="date" id="dateAdd">
+                </label></div>
+            <div class="formElement"><label>
+                    Priority:&nbsp
+                    <select class="priority" name="priorityEdit">
+                        <option value="default">Choose…</option>
+                        <option>Urgent!</option>
+                        <option>High</option>
+                        <option>Medium</option>
+                        <option>Low</option>
+                        <option>Backburner</option>
+                    </select>
+                </label></div>
+            <div class="formElement"><label>
+                    Notes:&nbsp
+                    <textarea class="notes" name="notes" id="notesAdd"></textarea>
+                </label></div>
+            <div class="formElement"><label>
+                    Completed:&nbsp
+                    <select class="completed" name="completedEdit">
+                        <option value="default">Choose…</option>
+                        <option>Yes</option>
+                        <option>No</option>
+                    </select>
+                </label></div>
+            <div class="formElement"><label>
+                    Project:&nbsp
+                    <input type="text" class="project" name="project" id="projectAdd">
+                </label></div>
+        </form>
+        <div class="dialogButtonDiv">
+            <button class="dialogButton" id="confirmBtnAdd" value="default" type="submit"
+                style="color:black">OK</button>
+            <button class="dialogButton" id="cancelBtnAdd" value="cancel" formmethod="dialog"
+                type="button">Cancel</button>
+        </div>
+    </dialog>
+</body>
+
+</html>
